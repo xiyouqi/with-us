@@ -32,10 +32,10 @@ Ratchet
 
 #### Categorys
 
-#### Conference Rooms
+#### Rooms
 
-#### Conference Room Apply
+#### Room Apply
 
-#### Conference Room Details
+#### Room Details
 
 #### Service Apply
