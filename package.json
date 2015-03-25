@@ -1,0 +1,15 @@
+{
+  "name": "Dashboard",
+  "version": "0.0.1",
+  "description": "Dashboard",
+  "main": "app.js",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "express": "~4.0",
+    "mongodb": "~2.0",
+    "xlsx": "~0.7",
+    "xlsjs": "~0.7"
+  }
+}
