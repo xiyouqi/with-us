@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>会员资格 - With Us</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="lib/ratchet/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="lib/ratchet/js/ratchet.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav wu-bar">
+      <button class="btn btn-link btn-nav pull-right">
+        <span class="icon icon-bars wu-bar-color"></span>
+      </button>
+      <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="sign-in.html">LOGIN</a>
+      <h1 class="title wu-bar-color">
+        <a data-transition="slide-out" class="pull-left" style="margin:6px;" href="index.html">
+          <img src="img/with-us-logo.png" height="30">
+        </a>
+      </h1>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content wu-back">
+
+      <div class="wu-card">
+        <div class="wu-header">
+          <p>MEMBER BENEFITS</p>
+          <p>会员资格</p>
+        </div>
+        <div class="wu-body">
+          <img src="img/member.png" width="100%">
+          <button class="btn btn-primary">Smart 会员</button>
+          <button class="btn btn-primary">WithUs 会员</button>
+          <p>WithUs 为您提供适合团队与个人工作的独立空间，
+          通过我们对空间的理解与设计，
+          使 User 们能够更轻松的工作与交流。</p>
+          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="member-apply.html">成为会员</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
