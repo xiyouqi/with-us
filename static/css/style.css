@@ -1,9 +1,20 @@
+.btn {
+  border-radius:0;
+}
 .wu-bar {
 	background-color: #26A9E1;
 	color: #fff;
 }
+.wu-bar .icon-bars {
+  font-size: 32px;
+}
+.wu-bar-login {
+  padding:4px 8px !important;
+  margin: 3px 0 !important;;
+}
 .wu-bar-color {
 	color: #fff;
+  border-color: #fff;
 }
 .wu-back {
 	background-color: #e5e5e5;
@@ -19,6 +30,21 @@
 	background-color:#fff;
 	padding: 20px 15px;
 	margin-top:15px;
+}
+.wu-slider .btn {
+  position: absolute;
+  bottom: 5px;
+  opacity: .85;
+  border-radius:0;
+  width:50%; 
+  left: 25%;
+  background-color: #26A9E1;
+  border: none;
+}
+.wu-btn-primary {
+  border-radius:0;
+  background-color: #26A9E1;
+  border-color: #26A9E1;
 }
 .wu-slider:after {
   position: absolute;
@@ -81,8 +107,82 @@
 	line-height: 150%;
 	margin: 20px 15px;
 }
+.wu-body img+img{
+  margin-top: 10px;
+}
+.wu-body>form {
+  margin-top:140px;
+}
 .wu-btn-border {
 	border-color: #26A9E1;
 	color: #26A9E1;
 	border-radius:0;
+  width:75%; margin:10px auto;
+}
+.wu-tip-box {
+  position: relative;
+  border-radius: 50% 50%;
+  width: 93px;
+  height: 93px;
+  border: solid 1px #1c1a23;
+  background-color:#1c1a23;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 93px;
+}
+.wu-tip-box:after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  border: none;
+  background-color:#1c1a23;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  margin-left: -13px; 
+  bottom: -11px;
+  -webkit-transform: translateY(-50%)translateX(50%)rotate(-27deg)skew(-20deg,0deg)scale(2.20,1.00);
+  -ms-transform: translateY(-50%)translateX(50%)rotate(-27deg)skew(-20deg,0deg)scale(2.20,1.00);
+  transform: translateY(-50%)translateX(50%)rotate(-27deg)skew(-20deg,0deg)scale(2.20,1.00);
+}
+.wu-tip-box.red {
+  border: solid 1px #f43d13;
+  background-color:#f43d13;
+}
+.wu-tip-box.red:after {
+  background-color:#f43d13;
+}
+.wu-tip-box.blue {
+  border: solid 1px #254A88;
+  background-color:#254A88;
+}
+.wu-tip-box.blue:after {
+  background-color:#254A88;
+}
+.wu-card>.wu-tip-box {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.wu-office-item {
+  position: relative;
+}
+
+.wu-office-item>a {
+  display: block;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 84px;
+  top: 35px;
+  padding: 10px;
+  font-size: 18px;
+  color:#fff;
+  line-height: 150%;
+  background-color: #000;
+  border:solid 5px #fff;
+  box-shadow: 0 0 15px #000;
+  opacity: .75;
 }
