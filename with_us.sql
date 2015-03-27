@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9.2
+-- version 4.1.13
 -- http://www.phpmyadmin.net
 --
--- 主机: localhost
--- 生成日期: 2015 年 03 月 24 日 16:23
--- 服务器版本: 5.1.58
--- PHP 版本: 5.2.5
+-- Host: localhost
+-- Generation Time: 2015-03-27 17:50:15
+-- 服务器版本： 5.6.17
+-- PHP Version: 5.5.14
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -16,7 +17,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `with_us`
+-- Database: `with_us`
 --
 
 -- --------------------------------------------------------
@@ -79,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `log` (
 CREATE TABLE IF NOT EXISTS `member_apply` (
   `member_apply_id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL,
+  `type` varchar(256) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   `member_no` int(11) DEFAULT NULL,
   `contact` varchar(256) DEFAULT NULL,
@@ -182,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `user_account` (
 CREATE TABLE IF NOT EXISTS `visit_apply` (
   `visit_apply_id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) DEFAULT NULL,
-  `visit_time` int(11) DEFAULT NULL,
+  `visit_time` varchar(256) DEFAULT NULL,
   `visit_num` int(11) DEFAULT NULL,
   `industry` varchar(256) DEFAULT NULL,
   `contact` varchar(256) DEFAULT NULL,
@@ -194,3 +195,7 @@ CREATE TABLE IF NOT EXISTS `visit_apply` (
   `finish_comment` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`visit_apply_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
