@@ -90,7 +90,7 @@ Flight::map('valid',function($data, $rules){
 Flight::map('form',function($table, $array, $method = 'insert'){
 	$map = array();
 	foreach ($array as $key => $val) {
-		$data = Flight::valid($_POST[$key], $val);
+		$data = Flight::valid(Flight::request()->data[$key], $val);
 		$map[':'.$key] = $data;
 	}
 	return call_user_func_array(array('Flight', $method), array($table, $map));
@@ -240,7 +240,7 @@ Flight::route('/sign-up', function(){
 
 		if('POST' === Flight::request()->method){
 
-			if($_POST['password'] != $_POST['repassword']){
+			if(Flight::request()->data['password'] != Flight::request()->data['repassword']){
 				return Flight::error('两次输入密码不一致');
 			}
 

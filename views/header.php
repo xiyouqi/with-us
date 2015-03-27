@@ -23,7 +23,7 @@
 		  <button class="btn btn-link btn-nav pull-right">
 		    <span class="icon icon-bars wu-bar-color"></span>
 		  </button>
-      <?php if(!$_SESSION['user']) { ?>
+      <?php if(!isset($_SESSION['user'])) { ?>
 		  <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-in">LOGIN</a>
 		  <?php }else{ ?>
       <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-out">LOGOUT</a>
