@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>会议室预约 - With Us</title>
-
-    <!-- Sets initial viewport load and disables zooming  -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="lib/ratchet/css/ratchet.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Include the compiled Ratchet JS -->
-    <script src="lib/ratchet/js/ratchet.min.js"></script>
-  </head>
-  <body>
-
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav wu-bar">
-      <button class="btn btn-link btn-nav pull-right">
-        <span class="icon icon-bars wu-bar-color"></span>
-      </button>
-      <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="sign-in.html">LOGIN</a>
-      <h1 class="title wu-bar-color">
-        <a data-transition="slide-out" class="pull-left" style="margin:6px;" href="index.html">
-          <img src="img/with-us-logo.png" height="30">
-        </a>
-      </h1>
-    </header>
+<?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content wu-back">
@@ -39,7 +6,7 @@
       <div class="wu-card">
         <div class="wu-tip-box blue">会议室预约</div>
         <div class="wu-body">
-          <form>
+          <form method="post">
             <input type="date" placeholder="使用时间">
             <input type="text" placeholder="会议室编号">
             <input type="text" placeholder="联系人">
@@ -66,7 +33,7 @@
             但是请不要爽约次数过多消耗掉大家刚刚建立的信任感，
             不然我们会无情的优先考虑别家的预订。
           </p>
-          <img src="img/room.png" width="100%">
+          <img src="static/img/room.png" width="100%">
           <p>
           中、小会议室 <br>
           Free <br>
@@ -77,7 +44,7 @@
             超过2小时以外的会议时间大多是无建设性的。
             请合理安排会议时间，不要把会议室也变成了办公桌。
           </p>
-          <img src="img/room-free.png" width="100%">
+          <img src="static/img/room-free.png" width="100%">
           <p>
             注：会议室白板内容请随会议结束一并拍照带走，我们不做保留。
             使用完会议室请将自己的东西拿出会议室，并关闭一切用电设备。
@@ -89,10 +56,5 @@
       </div>
 
     </div>
-    <script type="text/javascript">
-      document
-      .querySelector('#mySlider')
-      .addEventListener('slide', myFunction);
-    </script>
   </body>
 </html>

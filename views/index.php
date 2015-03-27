@@ -1,57 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>With Us</title>
-
-    <!-- Sets initial viewport load and disables zooming  -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="lib/ratchet/css/ratchet.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Include the compiled Ratchet JS -->
-    <script src="lib/ratchet/js/ratchet.min.js"></script>
-  </head>
-  <body>
-
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav wu-bar">
-      <button class="btn btn-link btn-nav pull-right">
-        <span class="icon icon-bars wu-bar-color"></span>
-      </button>
-      <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="sign-in.html">LOGIN</a>
-      <h1 class="title wu-bar-color">
-        <a data-transition="slide-out" class="pull-left" style="margin:6px;" href="index.html">
-          <img src="img/with-us-logo.png" height="30">
-        </a>
-      </h1>
-    </header>
-
+<?php echo $header;?>
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content wu-back">
       <div class="slider wu-slider" id="mySlider">
         <div class="slide-group">
           <div class="slide wu-side">
-            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit.html">预约参观</a>
-            <img src="img/slides/home-01.png" width="100%">
+            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit">预约参观</a>
+            <img src="static/img/slides/home-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/home-02-01.png" width="100%">
+            <img src="static/img/slides/home-02-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/home-03-01-01.png" width="100%">
+            <img src="static/img/slides/home-03-01-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/home-041-01-01.png" width="100%">
+            <img src="static/img/slides/home-041-01-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/home-05-01-01-01.png" width="100%">
+            <img src="static/img/slides/home-05-01-01-01.png" width="100%">
           </div>
         </div>
       </div>
@@ -62,7 +28,7 @@
           <p>独立办公室</p>
         </div>
         <div class="wu-body">
-          <img src="img/independent-office.png" width="93">
+          <img src="static/img/independent-office.png" width="93">
           <p>WithUs 为您提供适合团队与个人工作的独立空间，
           通过我们对空间的理解与设计，
           使 User 们能够更轻松的工作与交流。
@@ -73,7 +39,7 @@
           Through our understanding of space and design,
           User can make their work easier and exchanges.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj.html">了解更多</a>
+          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
         </div>
       </div>
 
@@ -83,7 +49,7 @@
           <p>联合办公区</p>
         </div>
         <div class="wu-body">
-          <img src="img/open-office.png" width="93">
+          <img src="static/img/open-office.png" width="93">
           <p>
             WithUs 联合办公区为您提供在不同热点城市的开放空间，
             以桌子为单位让 Users 们一起工作、沟通与成长。
@@ -95,7 +61,7 @@
             Joint office space not only face start-up enterprises,
             But also for mature companies dedicate more exchanges and cooperation.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj.html">了解更多</a>
+          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
         </div>
       </div>
 
@@ -106,7 +72,7 @@
         </div>
         <div class="wu-body">
           <div></div>
-          <img src="img/member-benefits.png" width="100%">
+          <img src="static/img/member-benefits.png" width="100%">
           <p>
             SMART 与 WithUs 会员卡是 WithUS联合办公为您提供的工作与社交解决方法，
             灵活的使用策略可以帮您充分利用日益碎片化的时间与空间。
@@ -116,7 +82,7 @@
             To work with you in providing social solutions,
             Flexible use policies can help you take advantage of the growing fragmentation of time and space
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="member-benefits.html">了解更多</a>
+          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="member-benefits">了解更多</a>
         </div>
       </div>
 
@@ -126,14 +92,14 @@
           <p>我们的空间</p>
         </div>
         <div class="wu-body">
-          <a data-transition="slide-in" href="office-bj.html">
-            <img src="img/locations-bj.png" width="100%">
+          <a data-transition="slide-in" href="office-bj">
+            <img src="static/img/locations-bj.png" width="100%">
           </a>
-          <a data-transition="slide-in" href="office-bj.html">
-            <img src="img/locations-sh.png" width="100%">
+          <a data-transition="slide-in" href="office-bj">
+            <img src="static/img/locations-sh.png" width="100%">
           </a>
-          <a data-transition="slide-in" href="next.html">
-            <img src="img/locations-sz.png" width="100%">
+          <a data-transition="slide-in" href="office-bj">
+            <img src="static/img/locations-sz.png" width="100%">
           </a>
         </div>
       </div>
@@ -144,8 +110,8 @@
           <p>我们的服务</p>
         </div>
         <div class="wu-body">
-            <a data-transition="slide-in" href="our-services.html">
-              <img src="img/our-services.png" width="100%">
+            <a data-transition="slide-in" href="our-services">
+              <img src="static/img/our-services.png" width="100%">
             </a>
         </div>
       </div>
@@ -170,8 +136,8 @@
             Our team will provide more extensive contacts with member companies to stay, Expanding opportunities for vocational skills. Of course, your life is not only work,
             There are happy to let you peek!
           </p>
-          <img src="img/event.png" width="100%">
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-apply.html">了解更多</a>
+          <img src="static/img/event.png" width="100%">
+          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-apply">了解更多</a>
         </div>
       </div>
 
@@ -181,7 +147,7 @@
           <p>入住团队</p>
         </div>
         <div class="wu-body">
-          <img src="img/settled-team.png" width="100%">
+          <img src="static/img/settled-team.png" width="100%">
           <a class="btn btn-primary btn-outlined btn-block wu-btn-border">了解更多</a>
         </div>
       </div>
@@ -203,7 +169,7 @@
             Every person has a story of innovation, every entrepreneur is a hero on the stage. In the development of space WithUs different content every day, but the goal is consistent story. Let us help you drip wisdom converging rivers, 
             fueled for your achievements.
           </p>
-          <img src="img/our-story.png" width="100%">
+          <img src="static/img/our-story.png" width="100%">
         </div>
       </div>
 

@@ -1,64 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>With Us</title>
-
-    <!-- Sets initial viewport load and disables zooming  -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="lib/ratchet/css/ratchet.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Include the compiled Ratchet JS -->
-    <script src="lib/ratchet/js/ratchet.min.js"></script>
-  </head>
-  <body>
-
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav wu-bar">
-      <button class="btn btn-link btn-nav pull-right">
-        <span class="icon icon-bars wu-bar-color"></span>
-      </button>
-      <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="sign-in.html">LOGIN</a>
-      <h1 class="title wu-bar-color">
-        <a data-transition="slide-out" class="pull-left" style="margin:6px;" href="index.html">
-          <img src="img/with-us-logo.png" height="30">
-        </a>
-      </h1>
-    </header>
+<?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content wu-back">
       <div class="slider wu-slider" id="mySlider">
         <div class="slide-group">
           <div class="slide wu-side">
-            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit.html">预约参观</a>
-            <img src="img/slides/bj-1-01.png" width="100%">
+            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit">预约参观</a>
+            <img src="static/img/slides/bj-1-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/bj-21-01.png" width="100%">
+            <img src="static/img/slides/bj-21-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/bj-3-01.png" width="100%">
+            <img src="static/img/slides/bj-3-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/bj-4-01-01.png" width="100%">
+            <img src="static/img/slides/bj-4-01-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/bj-5-01.png" width="100%">
+            <img src="static/img/slides/bj-5-01.png" width="100%">
           </div>
           <div class="slide wu-side">
-            <img src="img/slides/bj-6-01.png" width="100%">
+            <img src="static/img/slides/bj-6-01.png" width="100%">
           </div>
         </div>
       </div>
-<div class="wu-card">
+
+      <div class="wu-card">
         <div class="wu-header">
           <p>LIANGDIAN CENTER</p>
           <p>亮点设计中心</p>
@@ -87,7 +55,7 @@
           <p>联系我们</p>
         </div>
         <div class="wu-body">
-          <img src="img/contact-us.png" width="100%">
+          <img src="static/img/contact-us.png" width="100%">
         </div>
       </div>
 
@@ -125,8 +93,8 @@
 -会议室      -活动     -打印
 -自动售货机
           </p>
-          <img src="img/office-map.png" width="100%">
-          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="visit.html">预约参观</a>
+          <img src="static/img/office-map.png" width="100%">
+          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="visit">预约参观</a>
         </div>
       </div>
 
