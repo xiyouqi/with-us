@@ -8,10 +8,10 @@
         <div class="wu-body">
           <form method="post">
             <input type="text" name="email" placeholder="邮箱">
-            <input type="password" name="password" placeholder="密码">
+            <input type="password" name="password" placeholder="验证码">
+            <input type="password" name="password" placeholder="新密码">
             <input type="password" name="password" placeholder="确认密码">
             <a data-transition="slide-in" class="btn btn-block btn-link" href="">向邮箱发送验证码</a>
-            <input type="password" name="password" placeholder="验证码">
             <button class="btn btn-primary btn-block wu-btn-primary">修改密码</button>
             <a data-transition="slide-in" class="btn btn-block" href="sign-in">会员登录</a>
           </form>
