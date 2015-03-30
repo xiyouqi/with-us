@@ -12,6 +12,30 @@ Flight::route('/', function(){
 		Flight::render('index', $view);
 });
 
+Flight::route('/event-category', function(){
+		$view = array(
+			'title' => '活动'
+		);
+		Flight::render('header', $view, 'header');
+		Flight::render('event-category', $view);
+});
+
+Flight::route('/event-next', function(){
+		$view = array(
+			'title' => '即将举行的活动'
+		);
+		Flight::render('header', $view, 'header');
+		Flight::render('event-next', $view);
+});
+
+Flight::route('/event-pre', function(){
+		$view = array(
+			'title' => '历届活动回顾'
+		);
+		Flight::render('header', $view, 'header');
+		Flight::render('event-next', $view);
+});
+
 Flight::route('/event-apply', function(){
 		$view = array(
 			'title' => '活动申请'

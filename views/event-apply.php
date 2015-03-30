@@ -26,7 +26,7 @@
           价格4000元/半天(或晚上4-6个小时)<br>
           6000元/天(6-8个小时)
           </p>
-          <img src="static/img/member.png" width="100%">
+          <img src="static/img/event-apply.png" width="100%">
         </div>
       </div>
 

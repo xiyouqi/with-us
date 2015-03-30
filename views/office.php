@@ -99,10 +99,5 @@
       </div>
 
     </div>
-    <script type="text/javascript">
-      document
-      .querySelector('#mySlider')
-      .addEventListener('slide');
-    </script>
   </body>
 </html>

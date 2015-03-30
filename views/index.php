@@ -137,7 +137,7 @@
             There are happy to let you peek!
           </p>
           <img src="static/img/event.png" width="100%">
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-apply">了解更多</a>
+          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-category">了解更多</a>
         </div>
       </div>
 
@@ -184,17 +184,12 @@
             DONG CHENG,BEIJING,  <br>
             CHINA 100007 <br>
             北京市东城区东<br>四十条94号亮点创意中心5层 <br>
-            刘扬 <a href="tel:+13911669164">13911669164</a> <br>
-            刘昕 <a href="tel:+18611784816">18611784816</a>
+            刘扬 <a href="tel:13911669164">13911669164</a> <br>
+            刘昕 <a href="tel:18611784816">18611784816</a>
           </p>
         </div>
       </div>
 
     </div>
-    <script type="text/javascript">
-      document
-      .querySelector('#mySlider')
-      .addEventListener('slide');
-    </script>
   </body>
 </html>

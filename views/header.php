@@ -35,15 +35,17 @@
 		  </h1>
       <ul class="wu-menu">
         <li><a href="/">回到首页</a></li>
-        <li><a href="/sign-in">注册和登陆</a></li>
+        <li><a href="/sign-in">注册和登录</a></li>
         <li><a href="/office-bj">空间介绍</a></li>
         <li><a href="/room-apply">会议室预约租用</a></li>
         <li><a href="/event-apply">活动空间预约租用</a></li>
       </ul>
       <script type="text/javascript">
         document
-        .querySelector('.wu-bar-color')
         .addEventListener('click', function(e){
+          if(e.target.classList.toString().indexOf('icon-bars') == -1){
+            return;
+          }
           var menu = document.querySelector('.wu-menu');
           menu.classList.toggle('active');
         });

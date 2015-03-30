@@ -137,7 +137,10 @@ select {
 	line-height: 90%;
 }
 .wu-body {
-	margin-top:20px;
+  margin:10px 0;
+}
+.wu-header~.wu-body {
+  margin-top:20px;
 }
 .wu-body>p {
 	font-size: 15px;
@@ -206,6 +209,7 @@ select {
 }
 .wu-office-item {
   position: relative;
+  min-height: 84px;
 }
 
 .wu-office-item>a {
@@ -221,6 +225,28 @@ select {
   line-height: 150%;
   background-color: #000;
   border:solid 5px #fff;
+  box-shadow: 0 0 15px #000;
+  opacity: .75;
+}
+
+.wu-event-item {
+  position: relative;
+  min-height: 84px;
+}
+
+.wu-event-item>a {
+  display: block;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 84px;
+  top: 80px;
+  padding: 10px;
+  font-size: 18px;
+  color:#ff0000;
+  line-height: 150%;
+  background-color: #000;
+  border:solid 5px #ff0000;
   box-shadow: 0 0 15px #000;
   opacity: .75;
 }

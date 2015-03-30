@@ -13,7 +13,7 @@
             <input type="text" name="contact" placeholder="联系人">
             <input type="text" name="contact_mobile" placeholder="联系电话">
             <input type="text" name="contact_email" placeholder="邮箱">
-             <button class="btn btn-primary btn-block wu-btn-primary">预约申请</button>
+            <button class="btn btn-primary btn-block wu-btn-primary">预约申请</button>
           </form>
         </div>
       </div>
