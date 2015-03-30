@@ -148,6 +148,15 @@ Flight::route('/sign-in', function(){
 		Flight::render('sign-in', $view);
 });
 
+Flight::route('/reset-password', function(){
+		$view = array(
+			'title' => '找回密码'
+		);
+
+		Flight::render('header', $view, 'header');
+		Flight::render('reset-password', $view);
+});
+
 Flight::route('/sign-out', function(){
 	session_unset('user');
 	Flight::ok('用户注销成功', '/', 3);

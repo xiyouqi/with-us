@@ -9,8 +9,9 @@
           <form method="post">
             <input type="text" name="email" placeholder="邮箱">
             <input type="password" name="password" placeholder="密码">
-             <button class="btn btn-primary btn-block wu-btn-primary">会员登录</button>
-             <a data-transition="slide-in" class="btn btn-block" href="sign-up">会员注册</a>
+            <a data-transition="slide-in" class="btn btn-block btn-link" style="text-align:right;" href="reset-password">忘记密码</a>
+            <button class="btn btn-primary btn-block wu-btn-primary">会员登录</button>
+            <a data-transition="slide-in" class="btn btn-block" href="sign-up">会员注册</a>
           </form>
         </div>
       </div>
