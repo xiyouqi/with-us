@@ -8,7 +8,7 @@
         <div class="wu-body">
           <form method="post">
             <input name="subject" name="" type="text" placeholder="活动主题">
-            <input type="text" placeholder="举办时间">
+            <input type="date" placeholder="举办时间">
             <input type="text" placeholder="联系人">
             <input type="text" placeholder="联系电话">
             <input type="text" placeholder="规模人数">

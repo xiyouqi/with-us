@@ -180,9 +180,12 @@
         </div>
         <div class="wu-body">
           <p>
-            NO. 94 DONG SI SHI TIAO, FLOOR 5, DONG CHENG,BEIJING, CHINA 100007 <br>
+            NO. 94 DONG SI SHI TIAO, FLOOR 5, <br>
+            DONG CHENG,BEIJING,  <br>
+            CHINA 100007 <br>
             北京市东城区东<br>四十条94号亮点创意中心5层 <br>
-            刘扬 13911669164 <br> 刘昕 18611784816
+            刘扬 <a href="tel:+13911669164">13911669164</a> <br>
+            刘昕 <a href="tel:+18611784816">18611784816</a>
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@
         <div class="wu-tip-box">预约参观</div>
         <div class="wu-body">
           <form method="post">
-            <input type="text" name="visit_time" placeholder="参观时间">
+            <input type="date" name="visit_time" placeholder="参观时间">
             <input type="number" name="visit_num" placeholder="参观人数">
             <input type="text" name="industry" placeholder="所属行业">
             <input type="text" name="contact" placeholder="联系人">

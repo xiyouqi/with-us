@@ -1,24 +1,62 @@
 .btn {
   border-radius:0;
+  padding: 8px 0;
+}
+select {
+  padding: 6px 15px;
 }
 .wu-bar {
 	background-color: #26A9E1;
 	color: #fff;
+  height: 54px;
 }
 .wu-bar .icon-bars {
   font-size: 32px;
+  font-weight: 800;
+  margin-top: 7px;
 }
 .wu-bar-login {
   padding:4px 8px !important;
-  margin: 3px 0 !important;;
+  margin: 8px 0 !important;;
 }
 .wu-bar-color {
 	color: #fff;
   border-color: #fff;
 }
-.wu-back {
+.wu-bar~.wu-back {
 	background-color: #e5e5e5;
-	
+  padding-top: 54px;
+}
+.wu-menu {
+  position: absolute;
+  left: 0;
+  top:54px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+}
+.wu-menu.active {
+  height: auto;
+  opacity: .75;
+  -webkit-transition: -webkit-transform .25s;
+  -moz-transition: -moz-transform .25s;
+  transition: transform .25s;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.wu-menu a {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-bottom: 1px solid #666;
 }
 .wu-side {
 	font-size: 0 !important;
@@ -94,7 +132,7 @@
 	padding:10px 0;
 }
 .wu-card>.wu-header>p{
-	font-size: 24px;
+	font-size: 22px;
 	color:#000;
 	line-height: 90%;
 }
@@ -102,7 +140,7 @@
 	margin-top:20px;
 }
 .wu-body>p {
-	font-size: 17px;
+	font-size: 15px;
 	color:#717171;
 	line-height: 150%;
 	margin: 20px 15px;
@@ -117,7 +155,7 @@
 	border-color: #26A9E1;
 	color: #26A9E1;
 	border-radius:0;
-  width:75%; margin:10px auto;
+  width:50%; margin:10px auto;
 }
 .wu-tip-box {
   position: relative;
