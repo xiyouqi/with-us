@@ -1,29 +1,9 @@
 <?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content wu-back">
-      <div class="slider wu-slider" id="mySlider">
-        <div class="slide-group">
-          <div class="slide wu-side">
-            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit">预约参观</a>
-            <img src="static/img/slides/bj-1-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/bj-21-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/bj-3-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/bj-4-01-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/bj-5-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/bj-6-01.png" width="100%">
-          </div>
-        </div>
+    <div class="wu-back">
+      <div class="wu-slider">
+        <iframe src="/office-slider" name="slider" width="100%" scrolling="no" height="242" target="top"></iframe>
       </div>
 
       <div class="wu-card">
@@ -94,10 +74,9 @@
 -自动售货机
           </p>
           <img src="static/img/office-map.png" width="100%">
-          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="visit">预约参观</a>
+          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="visit">预约参观</a>
         </div>
       </div>
 
     </div>
-  </body>
-</html>
+<?php echo $footer;?>

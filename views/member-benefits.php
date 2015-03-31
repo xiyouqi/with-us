@@ -1,7 +1,7 @@
 <?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content wu-back">
+    <div class="wu-back">
 
       <div class="wu-card">
         <div class="wu-header">
@@ -41,7 +41,7 @@
           <p>
             Get 40% off of participating other activities hosted by SMART Solution Group.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
           <p>
           4 Free entrances to the Salon activities hosted by Co-working Space (valued price 200RMB).
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
         </div>
       </div>
 
@@ -105,10 +105,9 @@
           <p>
           2 Free entrances to the Salon activities hosted by Co-working Space.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
         </div>
       </div>
 
     </div>
-  </body>
-</html>
+<?php echo $footer;?>

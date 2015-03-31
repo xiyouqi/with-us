@@ -3,13 +3,27 @@ session_start();
 require 'flight/Flight.php';
 require 'common.php';
 require 'orm-mysql.php';
-
+Flight::render('footer', null, 'footer');
 Flight::route('/', function(){
 		$view = array(
 			'title' => '主页'
 		);
 		Flight::render('header', $view, 'header');
 		Flight::render('index', $view);
+});
+
+Flight::route('/index-slider', function(){
+		$view = array(
+			'title' => '主页'
+		);
+		Flight::render('index-slider', $view);
+});
+
+Flight::route('/office-slider', function(){
+		$view = array(
+			'title' => '主页'
+		);
+		Flight::render('office-slider', $view);
 });
 
 Flight::route('/event-category', function(){
@@ -122,6 +136,10 @@ Flight::route('/service-apply', function(){
 		);
 		Flight::render('header', $view, 'header');
 		Flight::render('service-apply', $view);
+});
+
+Flight::route('/service-no', function(){
+		Flight::error('服务尚未开通');
 });
 
 Flight::route('/sign-in', function(){

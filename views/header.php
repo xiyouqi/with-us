@@ -24,21 +24,21 @@
 		    <span class="icon icon-bars wu-bar-color"></span>
 		  </button>
       <?php if(!isset($_SESSION['user'])) { ?>
-		  <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-in">LOGIN</a>
+		  <a data-ignore="push" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-in">LOGIN</a>
 		  <?php }else{ ?>
-      <a data-transition="slide-in" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-out">LOGOUT</a>
+      <a data-ignore="push" class="btn btn-outlined pull-right wu-bar-color wu-bar-login" href="/sign-out">LOGOUT</a>
       <?php } ?>
       <h1 class="title wu-bar-color">
-		    <a data-transition="slide-out" class="pull-left" style="margin:11px;" href="/">
+		    <a data-ignore="push" class="pull-left" style="margin:11px;" href="/">
 		      <img src="static/img/with-us-logo.png" height="25">
 		    </a>
 		  </h1>
       <ul class="wu-menu">
-        <li><a href="/">回到首页</a></li>
-        <li><a href="/sign-in">注册和登录</a></li>
-        <li><a href="/office-bj">空间介绍</a></li>
-        <li><a href="/room-apply">会议室预约租用</a></li>
-        <li><a href="/event-apply">活动空间预约租用</a></li>
+        <li><a data-ignore="push" href="/">回到首页</a></li>
+        <li><a data-ignore="push" href="/sign-in">注册和登录</a></li>
+        <li><a data-ignore="push" href="/office-bj">空间介绍</a></li>
+        <li><a data-ignore="push" href="/room-apply">会议室预约租用</a></li>
+        <li><a data-ignore="push" href="/event-apply">活动空间预约租用</a></li>
       </ul>
       <script type="text/javascript">
         document
@@ -49,5 +49,9 @@
           var menu = document.querySelector('.wu-menu');
           menu.classList.toggle('active');
         });
+
+        var iframeOpen = function(url){
+          window.location = url; 
+        };
       </script>
 		</header>

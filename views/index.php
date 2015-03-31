@@ -1,27 +1,10 @@
 <?php echo $header;?>
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content wu-back">
-      <div class="slider wu-slider" id="mySlider">
-        <div class="slide-group">
-          <div class="slide wu-side">
-            <a data-transition="slide-in" class="btn btn-primary btn-block" href="visit">预约参观</a>
-            <img src="static/img/slides/home-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/home-02-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/home-03-01-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/home-041-01-01.png" width="100%">
-          </div>
-          <div class="slide wu-side">
-            <img src="static/img/slides/home-05-01-01-01.png" width="100%">
-          </div>
-        </div>
-      </div>
 
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="wu-back">
+      <div class="wu-slider">
+        <iframe src="/index-slider" name="slider" width="100%" scrolling="no" height="242" target="top"></iframe>
+      </div>
       <div class="wu-card">
         <div class="wu-header">
           <p>INDEPENDENT OFFICE</p>
@@ -39,7 +22,7 @@
           Through our understanding of space and design,
           User can make their work easier and exchanges.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
+          <a  data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
         </div>
       </div>
 
@@ -61,7 +44,7 @@
             Joint office space not only face start-up enterprises,
             But also for mature companies dedicate more exchanges and cooperation.
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
+          <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
         </div>
       </div>
 
@@ -72,7 +55,7 @@
         </div>
         <div class="wu-body">
           <div></div>
-          <img src="static/img/member-benefits.png" width="100%">
+          <img src="static/img/small/4.jpg" width="100%">
           <p>
             SMART 与 WithUs 会员卡是 WithUS联合办公为您提供的工作与社交解决方法，
             灵活的使用策略可以帮您充分利用日益碎片化的时间与空间。
@@ -82,7 +65,7 @@
             To work with you in providing social solutions,
             Flexible use policies can help you take advantage of the growing fragmentation of time and space
           </p>
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="member-benefits">了解更多</a>
+          <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="member-benefits">了解更多</a>
         </div>
       </div>
 
@@ -92,13 +75,13 @@
           <p>我们的空间</p>
         </div>
         <div class="wu-body">
-          <a data-transition="slide-in" href="office-bj">
+          <a data-ignore="push" href="office-bj">
             <img src="static/img/locations-bj.png" width="100%">
           </a>
-          <a data-transition="slide-in" href="office-bj">
+          <a data-ignore="push" href="office-bj">
             <img src="static/img/locations-sh.png" width="100%">
           </a>
-          <a data-transition="slide-in" href="office-bj">
+          <a data-ignore="push" href="office-bj">
             <img src="static/img/locations-sz.png" width="100%">
           </a>
         </div>
@@ -110,9 +93,50 @@
           <p>我们的服务</p>
         </div>
         <div class="wu-body">
-            <a data-transition="slide-in" href="our-services">
-              <img src="static/img/our-services.png" width="100%">
-            </a>
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-community"></span>
+            <span>社区管理员</span>
+          </a>
+
+          <a data-ignore="push" href="event-apply" class="wu-service-item">
+            <span class="wu-service-btn wu-service-event-place wu-service-dark"></span>
+            <span>活动沙龙</span>
+          </a>
+
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-train wu-service-light"></span>
+            <span>教育培训</span>
+          </a>
+
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn  wu-service-network wu-service-light"></span>
+            <span>高速网络</span>
+          </a>
+
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-rest"></span>
+            <span>休息区</span>
+          </a>
+
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-coffee"></span>
+            <span>创意咖啡</span>
+          </a>
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-fitness"></span>
+            <span>健身房</span>
+          </a>
+
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-art-area"></span >
+            <span>艺术区</span>
+          </a>
+
+          <a data-ignore="push" href="room-apply" class="wu-service-item">
+            <span  class="wu-service-btn wu-service-meeting-room"></span >
+            <span>会议室</span>
+          </a>
+          <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="our-services">了解更多</a>
         </div>
       </div>
 
@@ -136,8 +160,8 @@
             Our team will provide more extensive contacts with member companies to stay, Expanding opportunities for vocational skills. Of course, your life is not only work,
             There are happy to let you peek!
           </p>
-          <img src="static/img/event.png" width="100%">
-          <a data-transition="slide-in" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-category">了解更多</a>
+          <img src="static/img/small/6.jpg" width="100%">
+          <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-category">了解更多</a>
         </div>
       </div>
 
@@ -148,7 +172,7 @@
         </div>
         <div class="wu-body">
           <img src="static/img/settled-team.png" width="100%">
-          <a class="btn btn-primary btn-outlined btn-block wu-btn-border">了解更多</a>
+          <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border">了解更多</a>
         </div>
       </div>
 
@@ -169,7 +193,7 @@
             Every person has a story of innovation, every entrepreneur is a hero on the stage. In the development of space WithUs different content every day, but the goal is consistent story. Let us help you drip wisdom converging rivers, 
             fueled for your achievements.
           </p>
-          <img src="static/img/our-story.png" width="100%">
+          <img src="static/img/small/7.jpg" width="100%">
         </div>
       </div>
 
@@ -191,5 +215,4 @@
       </div>
 
     </div>
-  </body>
-</html>
+<?php echo $footer;?>

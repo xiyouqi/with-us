@@ -1,7 +1,7 @@
 <?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content wu-back">
+    <div class="wu-back">
 
       <div class="wu-card">
         <div class="wu-tip-box blue">会议室预约</div>
@@ -56,5 +56,4 @@
       </div>
 
     </div>
-  </body>
-</html>
+<?php echo $footer;?>

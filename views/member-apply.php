@@ -1,9 +1,9 @@
 <?php echo $header;?>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content wu-back">
+    <div class="wu-back">
 
-      <div class="wu-card" style="margin:15px;">
+      <div class="wu-card">
         <div class="wu-tip-box">会员申请</div>
         <div class="wu-body">
           <form method="post">
@@ -23,5 +23,4 @@
       </div>
 
     </div>
-  </body>
-</html>
+<?php echo $footer;?>
