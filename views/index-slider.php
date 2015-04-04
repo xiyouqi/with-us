@@ -91,14 +91,18 @@
 	  width: 0.3em;
 	  height: 0.3em;
 	}
+	.islider-dot-wrap{
+		bottom:5px;
+	}
 	.wu-side{
 		padding:0;
 		position:relative;
 	}
 	.wu-side .btn {
 		color: #fff;
+		font-size:14px;
 	  position: absolute;
-	  bottom: 30px;
+	  bottom: 20px;
 	  opacity: .85;
 	  border-radius:0;
 	  width:50%; 
@@ -108,7 +112,6 @@
 	  display: block;
 	  padding: 8px 0;
 	  margin-bottom: 10px;
-	  font-size: 18px;
 	  text-align:center;
 	  text-decoration: none;
 	}
@@ -120,19 +123,25 @@
 	<script type="text/javascript" src="/static/lib/iSlider/build/islider.js"></script>
 	<script>
 		var list = [{
-			'content' : '<div class="content wu-side"><a class="btn btn-primary btn-block" href="javascript:window.top.iframeOpen(\'visit\');">预约参观</a><img src="static/img/slides/home-01.png" height="242"></div>'
+			'content' : '<div class="content wu-side"><a class="btn btn-primary btn-block" href="javascript:window.top.iframeOpen(\'visit\');">预约参观</a><img src="static/img/slides/1.jpg" width="100%"></div>'
 		},
 		{
-			'content' : '<div class="content wu-side"><img src="static/img/slides/home-02-01.png" height="242"></div>'
+			'content' : '<div class="content wu-side"><img src="static/img/slides/3.jpg" width="100%"></div>'
 		},
 		{
-			'content' : '<div class="content wu-side"><img src="static/img/slides/home-03-01-01.png" height="242"></div>'
+			'content' : '<div class="content wu-side"><img src="static/img/slides/4.jpg" width="100%"></div>'
 		},
 		{
-			'content' : '<div class="content wu-side"><img src="static/img/slides/home-041-01-01.png" height="242"></div>'
+			'content' : '<div class="content wu-side"><img src="static/img/slides/5.jpg" width="100%"></div>'
 		},
 		{
-			'content' : '<div class="content wu-side"><img src="static/img/slides/home-05-01-01-01.png" height="242"></div>'
+			'content' : '<div class="content wu-side"><img src="static/img/slides/6.jpg" width="100%"></div>'
+		},
+		{
+			'content' : '<div class="content wu-side"><img src="static/img/slides/7.jpg" width="100%"></div>'
+		},
+		{
+			'content' : '<div class="content wu-side"><img src="static/img/slides/8.jpg" width="100%"></div>'
 		}];
 
 		var opts = {

@@ -97,6 +97,7 @@
 	}
 	.wu-side .btn {
 		color: #fff;
+		font-size: 14px;
 	  position: absolute;
 	  bottom: 30px;
 	  opacity: .85;
@@ -108,7 +109,6 @@
 	  display: block;
 	  padding: 8px 0;
 	  margin-bottom: 10px;
-	  font-size: 18px;
 	  text-align:center;
 	  text-decoration: none;
 	}

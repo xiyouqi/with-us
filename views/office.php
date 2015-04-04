@@ -66,15 +66,41 @@
           <p>提供的服务</p>
         </div>
         <div class="wu-body">
-          <p>
-            -独立办公室    -联合办公区    -创意咖啡
--休息区      -沙龙区      -社区管理员
--高速网络   -健身房      -仓库
--会议室      -活动     -打印
--自动售货机
-          </p>
+          <div style="margin:15px;">
+            <table style="text-align:left;font-size:14px;width:100%;color:#717171;">
+              <tbody>
+                <tr>
+                  <td width="33%">-独立办公室</td>
+                  <td width="33%">-联合办公区</td>
+                  <td width="33%"> -创意咖啡</td>
+                </tr>
+                <tr>
+                  <td>-休息区</td>
+                  <td>-沙龙区</td>
+                  <td>-社区管理员</td>
+                </tr>
+                <tr>
+                  <td>-高速网络</td>
+                  <td>-健身房</td>
+                  <td>-仓库</td>
+                </tr>
+                <tr>
+                  <td>-会议室</td>
+                  <td>-活动</td>
+                  <td>-打印</td>
+                </tr>
+                <tr>
+                  <td>-自动售货机</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <img src="static/img/office-map.png" width="100%">
-          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="visit">预约参观</a>
+          <p>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="visit">预约参观</a>
+          </p>
         </div>
       </div>
 

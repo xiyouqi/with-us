@@ -9,7 +9,9 @@
           <form>
             <p style="font-size:18px; margin:50px 15px;"><?php echo $message;?></p>
           </form>
-          <button class="btn btn-primary btn-block wu-btn-primary" onclick="javascript:history.go(-1);">返回上一页</button>
+          <p>
+            <button class="btn btn-primary btn-block wu-btn-primary" onclick="javascript:history.go(-1);">返回上一页</button>
+          </p>
         </div>
       </div>
 

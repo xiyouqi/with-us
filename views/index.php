@@ -2,8 +2,8 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="wu-back">
-      <div class="wu-slider">
-        <iframe src="/index-slider" name="slider" width="100%" scrolling="no" height="242" target="top"></iframe>
+      <div class="wu-slider" style="height:215px;">
+        <iframe src="/index-slider" name="slider" width="100%" scrolling="no" height="215" target="top"></iframe>
       </div>
       <div class="wu-card">
         <div class="wu-header">
@@ -75,15 +75,20 @@
           <p>我们的空间</p>
         </div>
         <div class="wu-body">
-          <a data-ignore="push" href="office-bj">
-            <img src="static/img/locations-bj.png" width="100%">
-          </a>
-          <a data-ignore="push" href="office-bj">
-            <img src="static/img/locations-sh.png" width="100%">
-          </a>
-          <a data-ignore="push" href="office-bj">
-            <img src="static/img/locations-sz.png" width="100%">
-          </a>
+          <p>
+            <a data-ignore="push" href="office-bj" class="wu-city-item bj">
+              <strong>BEIJING</strong> <br>
+              <span>北京</span>
+            </a>
+            <a data-ignore="push" href="office-bj" class="wu-city-item sh">
+              <strong>SHANGHAI</strong> <br>
+              <span>上海</span>
+            </a>
+            <a data-ignore="push" href="office-bj" class="wu-city-item sz">
+              <strong>SHENZHEN</strong> <br>
+              <span>深圳</span>
+            </a>
+          </p>
         </div>
       </div>
 

@@ -21,8 +21,9 @@
           <a  data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-next">更多活动</a>
         </div>
         <div class="wu-body">
-          <a  data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="event-apply">活动申请</a>
-        </div>
+          <p>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="event-apply">活动申请</a>
+          </p>        </div>
       </div>
 
     </div>

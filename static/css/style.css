@@ -79,13 +79,18 @@ select {
   position: relative;
 	text-align:center;
 	background-color:#fff;
-	padding: 20px 15px;
+	padding: 20px 0;
 	margin-top:15px;
 }
 .wu-btn-primary {
   border-radius:0;
   background-color: #26A9E1;
   border-color: #26A9E1;
+}
+form>.wu-btn-primary {
+  border-radius:0;
+  background-color: #1c1a23;
+  border-color: #1c1a23;
 }
 .wu-btn-footer {
   position: fixed;
@@ -146,6 +151,7 @@ select {
 .wu-card>.wu-header{
 	border-bottom: 1px solid #000;
 	padding:10px 0;
+  margin:0 15px;
 }
 .wu-card>.wu-header>p{
 	font-size: 22px;
@@ -162,19 +168,26 @@ select {
 	font-size: 15px;
 	color:#717171;
 	line-height: 150%;
-	margin: 20px 15px;
+	margin: 15px;
 }
 .wu-body img+img{
   margin-top: 10px;
 }
 .wu-body>form {
+  margin:15px;
   margin-top:140px;
 }
-.wu-btn-border {
-	border-color: #26A9E1;
-	color: #26A9E1;
+.btn-outlined.btn-primary.wu-btn-border {
+	border-color: #717171;
+	color: #717171;
+  font-size: 14px;
 	border-radius:0;
   width:50%; margin:10px auto;
+}
+.btn-outlined.btn-primary.wu-btn-border:active {
+  border-color: #1c1a23;
+  background-color:#1c1a23;
+  color: #fff;
 }
 .wu-tip-box {
   position: relative;
@@ -223,6 +236,33 @@ select {
   right: 30px;
   top: 30px;
 }
+.wu-city-item {
+  display: block;
+  border:1px solid #000;
+  color: #000;
+  padding: 10px;
+  padding-left: 50px;
+  margin:15px 0;
+  font-size: 14px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 35px 0;
+}
+.wu-city-item.bj{
+  background-image: url(../img/icon-bj.png);
+}
+.wu-city-item.sh{
+  background-image: url(../img/icon-sh.png);
+}
+.wu-city-item.sz{
+  background-image: url(../img/icon-sz.png);
+}
+.wu-city-item:active {
+  background-color: #26A9E1;
+  border-color: #26A9E1;
+  color: #fff;
+}
 .wu-office-item {
   position: relative;
   min-height: 84px;
@@ -231,40 +271,46 @@ select {
 .wu-office-item>a {
   display: block;
   position: absolute;
-  width: 80%;
-  left: 10%;
-  height: 84px;
-  top: 35px;
+  width: 70%;
+  left: 15%;
+  height: 74px;
+  top: 45px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
   color:#fff;
   line-height: 150%;
   background-color: #000;
   border:solid 5px #fff;
   box-shadow: 0 0 15px #000;
   opacity: .75;
+  text-align: center;
 }
-
+.wu-office-item>a:active {
+  opacity: 1;
+}
 .wu-event-item {
   position: relative;
   min-height: 84px;
 }
-
 .wu-event-item>a {
   display: block;
   position: absolute;
-  width: 80%;
-  left: 10%;
-  height: 84px;
-  top: 80px;
+  width: 70%;
+  left: 15%;
+  height: 74px;
+  top: 90px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
   color:#ff0000;
   line-height: 150%;
   background-color: #000;
   border:solid 5px #ff0000;
   box-shadow: 0 0 15px #000;
   opacity: .75;
+  text-align: center;
+}
+.wu-event-item>a:active {
+  opacity: 1;
 }
 .wu-service-item {
   display: inline-block;

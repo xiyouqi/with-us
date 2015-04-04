@@ -4,7 +4,7 @@
     <div class="wu-back">
 
       <div class="wu-card">
-        <div class="wu-tip-box red">活动申请</div>
+        <div class="wu-tip-box">活动申请</div>
         <div class="wu-body">
           <form method="post">
             <input name="subject" name="" type="text" placeholder="活动主题">

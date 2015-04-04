@@ -9,7 +9,9 @@
           <form>
             <p style="font-size:18px; margin:50px 15px;"><?php echo $message;?></p>
           </form>
-          <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="<?php echo $url ? $url : '/'?>">返回主页</a>
+          <p>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="<?php echo $url ? $url : '/'?>">返回主页</a>
+          </p>
         </div>
       </div>
 

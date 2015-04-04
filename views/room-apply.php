@@ -4,7 +4,7 @@
     <div class="wu-back">
 
       <div class="wu-card">
-        <div class="wu-tip-box blue">会议室预约</div>
+        <div class="wu-tip-box">会议室预约</div>
         <div class="wu-body">
           <form method="post">
             <input type="date" placeholder="使用时间">
