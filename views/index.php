@@ -5,27 +5,7 @@
       <div class="wu-slider" style="height:215px;">
         <iframe src="/index-slider" name="slider" width="100%" scrolling="no" height="215" target="top"></iframe>
       </div>
-      <div class="wu-card">
-        <div class="wu-header">
-          <p>INDEPENDENT OFFICE</p>
-          <p>独立办公室</p>
-        </div>
-        <div class="wu-body">
-          <img src="static/img/independent-office.png" width="93">
-          <p>WithUs 为您提供适合团队与个人工作的独立空间，
-          通过我们对空间的理解与设计，
-          使 User 们能够更轻松的工作与交流。
-          </p>
-          <p>
-          WithUs provide you with a separate space 
-          for team and individual work,
-          Through our understanding of space and design,
-          User can make their work easier and exchanges.
-          </p>
-          <a  data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
-        </div>
-      </div>
-
+      
       <div class="wu-card">
         <div class="wu-header">
           <p>OPEN OFFICE</p>
@@ -45,6 +25,27 @@
             But also for mature companies dedicate more exchanges and cooperation.
           </p>
           <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
+        </div>
+      </div>
+
+      <div class="wu-card">
+        <div class="wu-header">
+          <p>INDEPENDENT OFFICE</p>
+          <p>独立办公室</p>
+        </div>
+        <div class="wu-body">
+          <img src="static/img/independent-office.png" width="93">
+          <p>WithUs 为您提供适合团队与个人工作的独立空间，
+          通过我们对空间的理解与设计，
+          使 User 们能够更轻松的工作与交流。
+          </p>
+          <p>
+          WithUs provide you with a separate space 
+          for team and individual work,
+          Through our understanding of space and design,
+          User can make their work easier and exchanges.
+          </p>
+          <a  data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="office-bj">了解更多</a>
         </div>
       </div>
 
