@@ -29,12 +29,14 @@ Flight::map('error',function($message, $url = '', $time = 0){
 });
 
 Flight::map('ok',function($message, $url = '', $time = 0){
+
 	$view = array(
 		'title' => '成功提醒',
 		'message' => $message,
 		'url' => $url,
 		'time' => $time,
 	);
+
 	if(Flight::request()->ajax){
 		Flight::json(array('ok' => $view), 200);
 	}else{

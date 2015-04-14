@@ -30,7 +30,7 @@
           2 Free entrances to the Salon activities hosted by Co-working Space.
           </p>
           <p>
-            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply?type=0">成为会员</a>
           </p>
         </div>
       </div>
@@ -66,7 +66,7 @@
           4 Free entrances to the Salon activities hosted by Co-working Space (valued price 200RMB).
           </p>
           <p>
-            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply?type=1">成为会员</a>
           </p>
         </div>
       </div>
@@ -109,7 +109,7 @@
             Get 40% off of participating other activities hosted by SMART Solution Group.
           </p>
           <p>
-            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply">成为会员</a>
+            <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="member-apply?type=2">成为会员</a>
           </p>
         </div>
       </div>

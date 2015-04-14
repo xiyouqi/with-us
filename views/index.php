@@ -99,9 +99,10 @@
           <p>我们的服务</p>
         </div>
         <div class="wu-body">
-          <a data-ignore="push" href="service-no" class="wu-service-item">
-            <span class="wu-service-btn wu-service-community"></span>
-            <span>社区管理员</span>
+          
+          <a data-ignore="push" href="room-apply" class="wu-service-item">
+            <span  class="wu-service-btn wu-service-meeting-room"></span >
+            <span>会议室</span>
           </a>
 
           <a data-ignore="push" href="event-apply" class="wu-service-item">
@@ -138,10 +139,11 @@
             <span>艺术区</span>
           </a>
 
-          <a data-ignore="push" href="room-apply" class="wu-service-item">
-            <span  class="wu-service-btn wu-service-meeting-room"></span >
-            <span>会议室</span>
+          <a data-ignore="push" href="service-no" class="wu-service-item">
+            <span class="wu-service-btn wu-service-community"></span>
+            <span>社区管理员</span>
           </a>
+
           <a data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="our-services">了解更多</a>
         </div>
       </div>

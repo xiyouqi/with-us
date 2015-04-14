@@ -10,11 +10,7 @@
         </div>
         <div class="wu-body">
           <img src="static/img/event-1.png" width="100%">
-        </div>
-        <div class="wu-body">
           <img src="static/img/event-2.png" width="100%">
-        </div>
-        <div class="wu-body">
           <img src="static/img/event-3.png" width="100%">
         </div>
         <div class="wu-body">

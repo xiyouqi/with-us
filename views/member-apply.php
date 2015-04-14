@@ -8,9 +8,9 @@
         <div class="wu-body">
           <form method="post">
             <select name="type" placeholder="会员类型">
-              <option>Smart 钻石卡</option>
-              <option>WithUs 金卡</option>
-              <option>WithUs 银卡</option>
+              <option <?php echo ($_GET['type']==2) ? 'selected="selected"' : ''?> >Smart 钻石卡</option>
+              <option <?php echo ($_GET['type']==1) ? 'selected="selected"' : ''?> >WithUs 金卡</option>
+              <option <?php echo ($_GET['type']==0) ? 'selected="selected"' : ''?> >WithUs 银卡</option>
             </select>
             <input type="text" name="amount" placeholder="充值金额">
             <input type="text" name="member_no" placeholder="购买数量">
