@@ -1,7 +1,7 @@
 <?php
 Flight::register(
 	'db', 'PDO',
-	array('mysql:host=localhost;dbname=with_us','root','glosea'),
+	array('mysql:host=localhost;dbname=with-us','root',''),
 	function($db){
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->prepare('set names utf8')->execute();

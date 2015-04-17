@@ -16,7 +16,7 @@
       </div>
 
     </div>
-    <? if($url && $time){ ?>
+    <?php if($url && $time){ ?>
     <script>setTimeout(function(){window.location = '<?php echo $url;?>'},<?php echo $time;?> * 1000);</script>
     <?php } ?>
 <?php echo $footer;?>
