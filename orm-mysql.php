@@ -15,6 +15,19 @@ Flight::map('insert',function($table, $array){
 	return $rs->rowCount();
 });
 
+Flight::map('update',function($table,$array,$id){
+	$keys = implode(array_keys($array), '`,`');
+	foreach ($array as $key => $value) {
+		$filed[]= '`'.$key.'`'.'='.$value;
+	}
+
+	$filed = join($filed,',');
+	$sql = "update `$table` SET $filed where `visit_apply_id` = $id";
+	$rs = Flight::db()->query($sql);
+	return $rs->execute();
+
+});
+
 Flight::map('find',function($table, $array){
 	$sql = "SELECT * FROM `$table`";
 	$where = $and = '';
@@ -56,4 +69,17 @@ Flight::map('form',function($table, $array, $method = 'insert'){
 		$map[':'.$key] = $data;
 	}
 	return call_user_func_array(array('Flight', $method), array($table, $map));
+});
+
+Flight::map('finds',function($table, $array){
+	$sql = "SELECT * FROM `$table`";
+	$where = $and = '';
+	foreach ($array as $key => $value) {
+		$where .= $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
+		$and = ' AND ';
+	}
+	$sql = $where ? $sql . ' WHERE ' . $where : $sql;
+	$rs = Flight::db()->prepare($sql);
+	$rs->execute($array);
+	return $rs->fetchAll(PDO::FETCH_ASSOC);
 });
