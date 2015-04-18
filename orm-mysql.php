@@ -28,6 +28,13 @@ Flight::map('update',function($table, $array, $where = 'id'){
 	return $rs->rowCount();
 });
 
+Flight::map('delete',function($table, $array, $where = 'id'){
+	$sql = "DELETE FROM `$table` WHERE `$where` = ':$where'";
+	$rs = Flight::db()->prepare($sql);
+	$rs->execute($array);
+	return $rs->rowCount();
+});
+
 Flight::map('where',function($table, $array, $select = '*', $one = false){
 	$select = is_array($select) ? '`' . implode($select, '`,`') . '`' : $select;
 	$sql = "SELECT $select FROM `$table`";
