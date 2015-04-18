@@ -9,29 +9,31 @@ Flight::map('query',function($sql, $array = null){
 
 Flight::map('insert',function($table, $array){
 	$keys = implode(array_keys($array), '`,`');
-	$sql = "INSERT INTO `$table` (`".str_replace(':', '', $keys)."`) VALUES (".str_replace('`', '', $keys).")";
+	$values = implode(array_keys($array), ',:');
+	$sql = "INSERT INTO `$table` (`$keys`) VALUES (:$values)";
 	$rs = Flight::db()->prepare($sql);
 	$rs->execute($array);
 	return $rs->rowCount();
 });
 
-Flight::map('update',function($table, $array, $id = 'id'){
+Flight::map('update',function($table, $array, $where = 'id'){
 	$fileds = $and = '';
 	foreach ($array as $key => $value) {
-		$fileds = $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
+		$fileds = $and . '`' . $key . '`' . ' = :' . $key;
 		$and = ' , ';
 	}
-	$sql = "UPDATE `$table` SET $fileds WHERE `$id` = ':$id'";
+	$sql = "UPDATE `$table` SET $fileds WHERE `$where` = ':$where'";
 	$rs = Flight::db()->prepare($sql);
 	$rs->execute($array);
 	return $rs->rowCount();
 });
 
-Flight::map('where',function($table, $array, $one = false){
-	$sql = "SELECT * FROM `$table`";
+Flight::map('where',function($table, $array, $select = '*', $one = false){
+	$select = is_array($select) ? '`' . implode($select, '`,`') . '`' : $select;
+	$sql = "SELECT $select FROM `$table`";
 	$where = $and = '';
 	foreach ($array as $key => $value) {
-		$where .= $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
+		$where .= $and . '`' . $key . '`' . ' = :' . $key;
 		$and = ' AND ';
 	}
 	$sql = $where ? $sql . ' WHERE ' . $where : $sql;
@@ -40,8 +42,8 @@ Flight::map('where',function($table, $array, $one = false){
 	return $one ? $rs->fetch(PDO::FETCH_ASSOC) : $rs->fetchAll(PDO::FETCH_ASSOC);
 });
 
-Flight::map('find',function($table, $array){
-	return Flight::where($table, $array, true);
+Flight::map('find',function($table, $array, $select = '*'){
+	return Flight::where($table, $array, $select, true);
 });
 
 Flight::map('valid',function($data, $rules){
@@ -69,7 +71,7 @@ Flight::map('form',function($table, $array, $method = 'insert'){
 	$map = array();
 	foreach ($array as $key => $val) {
 		$data = Flight::valid(Flight::request()->data[$key], $val);
-		$map[':' . $key] = $data;
+		$map[$key] = $data;
 	}
 	return call_user_func_array(array('Flight', $method), array($table, $map));
 });
