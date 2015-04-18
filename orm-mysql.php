@@ -15,13 +15,13 @@ Flight::map('insert',function($table, $array){
 	return $rs->rowCount();
 });
 
-Flight::map('update',function($table, $array, $id, $idName = 'id'){
+Flight::map('update',function($table, $array, $id = 'id'){
 	$fileds = $and = '';
 	foreach ($array as $key => $value) {
 		$fileds = $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
 		$and = ' , ';
 	}
-	$sql = "update `$table` SET $fileds where `$idName` = $id";
+	$sql = "UPDATE `$table` SET $fileds WHERE `$id` = ':$id'";
 	$rs = Flight::db()->prepare($sql);
 	$rs->execute($array);
 	return $rs->rowCount();
@@ -69,7 +69,7 @@ Flight::map('form',function($table, $array, $method = 'insert'){
 	$map = array();
 	foreach ($array as $key => $val) {
 		$data = Flight::valid(Flight::request()->data[$key], $val);
-		$map[':'.$key] = $data;
+		$map[':' . $key] = $data;
 	}
 	return call_user_func_array(array('Flight', $method), array($table, $map));
 });
