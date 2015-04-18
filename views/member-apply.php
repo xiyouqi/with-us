@@ -12,7 +12,7 @@
               <option <?php echo ($_GET['type']==1) ? 'selected="selected"' : ''?> >WithUs 金卡</option>
               <option <?php echo ($_GET['type']==0) ? 'selected="selected"' : ''?> >WithUs 银卡</option>
             </select>
-            <input type="text" name="amount" placeholder="充值金额">
+            <input type="text" name="amount" placeholder="充值金额" readonly="true">
             <input type="text" name="member_no" placeholder="购买数量">
             <input type="text" name="contact" placeholder="联系人">
             <input type="text" name="contact_mobile" placeholder="联系电话">
@@ -23,4 +23,17 @@
       </div>
 
     </div>
+    <script type="text/javascript">
+        var amts = {
+          'Smart 钻石卡':6000,
+          'WithUs 金卡':4000,
+          'WithUs 银卡':3600
+        }; 
+        var selectType = document.querySelector('select[name=type]');
+        var amtInput =  document.querySelector('input[name=amount]');
+        selectType.addEventListener('change', function(e){
+          amtInput.value = amts[selectType.value];
+        });
+        amtInput.value = amts[selectType.value];
+      </script>
 <?php echo $footer;?>

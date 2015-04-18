@@ -13,12 +13,14 @@ Flight::map('console',function($info){
 });
 
 Flight::map('error',function($message, $url = '', $time = 0){
+
 	$view = array(
 		'title' => '错误提醒',
 		'message' => $message,
 		'url' => $url,
 		'time' => $time,
 	);
+
 	if(Flight::request()->ajax){
 		Flight::json(array('error' => $view), 400);
 	}else{
@@ -26,6 +28,7 @@ Flight::map('error',function($message, $url = '', $time = 0){
 		Flight::render('message-error', $view);
 	}
 	exit();
+
 });
 
 Flight::map('ok',function($message, $url = '', $time = 0){
@@ -44,4 +47,5 @@ Flight::map('ok',function($message, $url = '', $time = 0){
 		Flight::render('message-ok', $view);
 	}
 	exit();
+	
 });
