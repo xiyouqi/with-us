@@ -27,7 +27,7 @@ Flight::map('update',function($table, $array, $id, $idName = 'id'){
 	return $rs->rowCount();
 });
 
-Flight::map('find',function($table, $array){
+Flight::map('where',function($table, $array, $one = false){
 	$sql = "SELECT * FROM `$table`";
 	$where = $and = '';
 	foreach ($array as $key => $value) {
@@ -37,7 +37,11 @@ Flight::map('find',function($table, $array){
 	$sql = $where ? $sql . ' WHERE ' . $where : $sql;
 	$rs = Flight::db()->prepare($sql);
 	$rs->execute($array);
-	return $rs->fetch(PDO::FETCH_ASSOC);
+	return $one ? $rs->fetch(PDO::FETCH_ASSOC) : $rs->fetchAll(PDO::FETCH_ASSOC);
+});
+
+Flight::map('find',function($table, $array){
+	return Flight::where($table, $array, true);
 });
 
 Flight::map('valid',function($data, $rules){
@@ -68,17 +72,4 @@ Flight::map('form',function($table, $array, $method = 'insert'){
 		$map[':'.$key] = $data;
 	}
 	return call_user_func_array(array('Flight', $method), array($table, $map));
-});
-
-Flight::map('finds',function($table, $array){
-	$sql = "SELECT * FROM `$table`";
-	$where = $and = '';
-	foreach ($array as $key => $value) {
-		$where .= $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
-		$and = ' AND ';
-	}
-	$sql = $where ? $sql . ' WHERE ' . $where : $sql;
-	$rs = Flight::db()->prepare($sql);
-	$rs->execute($array);
-	return $rs->fetchAll(PDO::FETCH_ASSOC);
 });
