@@ -15,17 +15,16 @@ Flight::map('insert',function($table, $array){
 	return $rs->rowCount();
 });
 
-Flight::map('update',function($table,$array,$id){
-	$keys = implode(array_keys($array), '`,`');
+Flight::map('update',function($table, $array, $id, $idName = 'id'){
+	$fileds = $and = '';
 	foreach ($array as $key => $value) {
-		$filed[]= '`'.$key.'`'.'='.$value;
+		$fileds = $and . '`' . str_replace(':', '', $key) . '`' . ' = ' . $key;
+		$and = ' , ';
 	}
-
-	$filed = join($filed,',');
-	$sql = "update `$table` SET $filed where `visit_apply_id` = $id";
-	$rs = Flight::db()->query($sql);
-	return $rs->execute();
-
+	$sql = "update `$table` SET $fileds where `$idName` = $id";
+	$rs = Flight::db()->prepare($sql);
+	$rs->execute($array);
+	return $rs->rowCount();
 });
 
 Flight::map('find',function($table, $array){
