@@ -9,9 +9,9 @@
           <p>我们的活动</p>
         </div>
         <div class="wu-body">
-          <img src="static/img/event-1.png" width="100%">
-          <img src="static/img/event-2.png" width="100%">
-          <img src="static/img/event-3.png" width="100%">
+          <?php foreach ($events as $event) {?>
+          <img src="<?php echo $event['event_background']?>" width="100%">
+          <?php } ?>
         </div>
         <div class="wu-body">
           <a  data-ignore="push" class="btn btn-primary btn-outlined btn-block wu-btn-border" href="event-next">更多活动</a>
@@ -19,7 +19,8 @@
         <div class="wu-body">
           <p>
             <a data-ignore="push" class="btn btn-primary btn-block wu-btn-primary" href="event-apply">活动申请</a>
-          </p>        </div>
+          </p>        
+        </div>
       </div>
 
     </div>

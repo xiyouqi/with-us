@@ -35,16 +35,20 @@ Flight::route('/event-category', function(){
 });
 
 Flight::route('/event-next', function(){
+		$events = Flight::where('event', array('status' => 0));
 		$view = array(
-			'title' => '即将举行的活动'
+			'title' => '即将举行的活动',
+			'events' => $events
 		);
 		Flight::render('header', $view, 'header');
 		Flight::render('event-next', $view);
 });
 
 Flight::route('/event-pre', function(){
+		$events = Flight::where('event', array('status' => 1));
 		$view = array(
-			'title' => '历届活动回顾'
+			'title' => '历届活动回顾',
+			'events' => $events
 		);
 		Flight::render('header', $view, 'header');
 		Flight::render('event-next', $view);
@@ -54,6 +58,23 @@ Flight::route('/event-apply', function(){
 		$view = array(
 			'title' => '活动申请'
 		);
+
+		$schema = array(
+			'service_id' => '服务类型|fill-2',
+			'description' => '活动主题|required|maxLength-256',
+			'service_time' => '使用时间|required|maxLength-10|minLength-8',
+			'contact' => '联系人|required|maxLength-20|minLength-2',
+			'contact_mobile' => '联系电话|required|maxLength-13|minLength-7',
+			'number' => '规模人数|required|number',
+			'apply_time' => '申请时间|now',
+			'status' => '状态|fill-0'
+		);
+
+		if('POST' === Flight::request()->method){
+			Flight::form('service_apply', $schema);
+			Flight::ok('活动场地预约提交成功。');
+		}
+
 		Flight::render('header', $view, 'header');
 		Flight::render('event-apply', $view);
 });
@@ -126,6 +147,23 @@ Flight::route('/room-apply', function(){
 		$view = array(
 			'title' => '会议室预约'
 		);
+
+		$schema = array(
+			'service_id' => '服务类型|fill-1',
+			'service_time' => '使用时间|required|maxLength-10|minLength-8',
+			'service_no' => '会议室编号|required|maxLength-20',
+			'contact' => '联系人|required|maxLength-20|minLength-2',
+			'contact_mobile' => '联系电话|required|maxLength-13|minLength-7',
+			'number' => '规模人数|required|number',
+			'apply_time' => '申请时间|now',
+			'status' => '状态|fill-0'
+		);
+
+		if('POST' === Flight::request()->method){
+			Flight::form('service_apply', $schema);
+			Flight::ok('会议室预约提交成功。');
+		}
+
 		Flight::render('header', $view, 'header');
 		Flight::render('room-apply', $view);
 });
@@ -134,6 +172,21 @@ Flight::route('/service-apply', function(){
 		$view = array(
 			'title' => '服务申请'
 		);
+
+		$schema = array(
+			'service_name' => '服务名称|required|maxLength-20',
+			'service_time' => '服务时间|required|maxLength-10|minLength-8',
+			'contact' => '联系人|required|maxLength-20|minLength-2',
+			'contact_mobile' => '联系电话|required|maxLength-13|minLength-7',
+			'contact_email' => '邮箱|email',
+			'apply_time' => '申请时间|now',
+			'status' => '状态|fill-0'
+		);
+
+		if('POST' === Flight::request()->method){
+			Flight::form('service', $schema);
+			Flight::ok('创意服务申请提交成功。');
+		}
 		Flight::render('header', $view, 'header');
 		Flight::render('service-apply', $view);
 });
