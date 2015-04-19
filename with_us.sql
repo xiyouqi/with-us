@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2015-03-27 17:50:15
+-- Generation Time: 2015-04-19 05:17:01
 -- 服务器版本： 5.6.17
--- PHP Version: 5.5.14
+-- PHP Version: 5.5.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,7 +37,16 @@ CREATE TABLE IF NOT EXISTS `event` (
   `limit_num` int(11) DEFAULT NULL,
   `current_signup` int(11) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `event`
+--
+
+INSERT INTO `event` (`event_id`, `event_name`, `event_time`, `event_timestamp`, `event_background`, `event_desc`, `status`, `limit_num`, `current_signup`) VALUES
+(1, NULL, NULL, NULL, 'static/img/event-1.png', NULL, 0, NULL, NULL),
+(2, NULL, NULL, NULL, 'static/img/event-2.png', NULL, 1, NULL, NULL),
+(3, NULL, NULL, NULL, 'static/img/event-3.png', NULL, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -103,12 +112,31 @@ CREATE TABLE IF NOT EXISTS `service` (
   `service_name` varchar(256) DEFAULT NULL,
   `service_icon` varchar(256) DEFAULT NULL,
   `apply_uid` varchar(256) DEFAULT NULL,
+  `service_time` varchar(256) DEFAULT NULL,
+  `contact` varchar(256) DEFAULT NULL,
+  `contact_mobile` varchar(256) DEFAULT NULL,
+  `contact_email` varchar(256) DEFAULT NULL,
   `apply_time` int(11) DEFAULT NULL,
   `approve_uid` int(11) DEFAULT NULL,
   `approve_time` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`service_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- 转存表中的数据 `service`
+--
+
+INSERT INTO `service` (`service_id`, `service_name`, `service_icon`, `apply_uid`, `service_time`, `contact`, `contact_mobile`, `contact_email`, `apply_time`, `approve_uid`, `approve_time`, `status`) VALUES
+(1, '会议室服务', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
+(2, '活动场地服务', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
+(3, '创意咖啡', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(4, '健身房', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(5, '艺术区', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(6, '休息区', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(7, '高速网络', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(8, '社区管理员', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(9, '教育培训', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -120,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `service_apply` (
   `service_apply_id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) DEFAULT NULL,
   `service_id` int(11) DEFAULT NULL,
-  `service_time` int(11) DEFAULT NULL,
+  `service_time` varchar(256) DEFAULT NULL,
   `service_no` varchar(256) DEFAULT NULL,
   `contact` varchar(256) DEFAULT NULL,
   `contact_mobile` varchar(256) DEFAULT NULL,
