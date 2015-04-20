@@ -168,6 +168,26 @@ Flight::route('/room-apply', function(){
 		Flight::render('room-apply', $view);
 });
 
+Flight::route('/orderlist',function(){
+		$view = array(
+			'title' => '订单列表'
+			);
+		$filter = array(
+			'visit_num'	=> 21,
+			'status' =>'5' 
+			);
+
+		$visit = Flight::update('visit_apply', $filter,'1');
+		$visit = Flight::finds('visit_apply', $filter);
+		// $visit = Flight::json($visit);
+		if(!$visit){
+			return Flight::error('你还没有预约！');
+		}
+		// var_dump($visit);
+		Flight::render('header',$view,'header');
+		Flight::render('orderlist',array('visit'=>$visit));
+});
+
 Flight::route('/service-apply', function(){
 		$view = array(
 			'title' => '服务申请'
